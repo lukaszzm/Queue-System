@@ -9,7 +9,7 @@ def run_multiple_simulations(lambda_a: float, lambda_s: float,
     e_x_values = []
 
     for _ in range(simulations):
-        _, _, _, r, x = queue.simulate(lambda_a, lambda_s, sim_time)
+        _, _, _, r, x, _ = queue.simulate(lambda_a, lambda_s, sim_time)
         e_r_values.append(r)
         e_x_values.append(x)
 

@@ -10,8 +10,7 @@ if __name__ == '__main__':
     ]
 
     for lambda_a, lambda_s in scenarios:
-        arrival_times, queue_sizes, tasks_done = queue.simulate(lambda_a,
-                                                                lambda_s,
-                                                                max_time)
+        arrival_times, queue_sizes, tasks_done, _, _, _ = (
+            queue.simulate(lambda_a, lambda_s, max_time))
 
         queue.plot(queue_sizes, tasks_done, lambda_a, lambda_s, max_time)

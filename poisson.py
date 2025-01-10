@@ -11,7 +11,7 @@ def simulate_process(lambda_param: float, max_time: float) -> (float, int):
     current_jump: int = 0
 
     while current_time < max_time:
-        inter_arrival_time = exponential.generate(lambda_param)[0]
+        inter_arrival_time = exponential.generate(lambda_param)
         current_time += inter_arrival_time
 
         if current_time > max_time:
